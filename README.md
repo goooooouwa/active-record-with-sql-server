@@ -1,5 +1,5 @@
 # Introduction
-This app demonstrates a way to use ActiveRecord with an exising SQL server database
+This app demonstrates a way to use ActiveRecord with an exising SQL server database.
 
 # The problem
 You have an exising("legacy") SQL server database which you have no control over its schema. How to use it with ActiveRecord?
