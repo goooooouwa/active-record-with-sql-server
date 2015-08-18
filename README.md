@@ -16,7 +16,7 @@ ActiveRecord WITHOUT Migrations +
 ## How to do that?
 1. By hand-writing `db/schema.rb` file, we can map existing db schema into
 our app which requires little work to maintain when db changes it's schema. (you can see there's [no `db/migrate`](https://github.com/goooooouwa/active-record-with-sql-server/tree/master/db) folder in this demo app.)
-2. With activerecord-sqlserver-adapter, we can take full power of
+2. With [activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter), we can take full power of
 ActiveRecord with SQL server database.
 
 ## What does it look like?
