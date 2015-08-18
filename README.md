@@ -12,7 +12,7 @@ db structure.
 
 # Solution:
 ActiveRecord WITHOUT Migrations +
-activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter)
+[activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter)
 
 ## Notes:
 By hand-writing `db/schema.rb` file, we can map existing db schema with
