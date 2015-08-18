@@ -20,7 +20,17 @@ our app which requires little work to maintain when db changes it's schema.
 ActiveRecord with SQL server database.
 
 ## What does it look like?
-TODO: examples of what we can do with it?
+For instance, with a `FacebookPage` model setup like [this](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/app/models/facebook_page.rb), you can do things like
+```ruby
+# 1. Execute stored procedures
+FacebookPage.execute_procedure 'p_FacebookPage_sel', id: 32
+# 2. Conditions and Ordering
+FacebookPage.where("created_dt <= ?", Time.parse("2015-04-22T08:00:00Z")).order("created_dt desc")   # Find all facebook pages created before 2015-04-22 08:00 and order them by created_at in descending order
+# 3. Joining Tables
+FacebookPage.joins(:facebook_page_event).where({facebook_page_events: {id: 5}})   # Find all facebook_pages for event id being 5
+# and much more
+```
+completely without ever writing one procedure. Of course except the first one :)
 
 # Tools used
 - [ActiveRecord](https://github.com/rails/rails/tree/master/activerecord)
