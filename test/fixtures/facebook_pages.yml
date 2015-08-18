@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  facebook_page_id: MyString
+  access_token: MyString
+  created_dt: 2015-08-18 16:51:23
+
+two:
+  facebook_page_id: MyString
+  access_token: MyString
+  created_dt: 2015-08-18 16:51:23

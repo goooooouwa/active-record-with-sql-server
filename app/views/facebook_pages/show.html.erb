@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Facebook page:</strong>
+  <%= @facebook_page.facebook_page_id %>
+</p>
+
+<p>
+  <strong>Access token:</strong>
+  <%= @facebook_page.access_token %>
+</p>
+
+<p>
+  <strong>Created dt:</strong>
+  <%= @facebook_page.created_dt %>
+</p>
+
+<%= link_to 'Edit', edit_facebook_page_path(@facebook_page) %> |
+<%= link_to 'Back', facebook_pages_path %>
