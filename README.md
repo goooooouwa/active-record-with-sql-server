@@ -14,9 +14,9 @@ ActiveRecord WITHOUT Migrations +
 [activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter)
 
 ## How to do that?
-By hand-writing `db/schema.rb` file, we can map existing db schema with
+1. By hand-writing `db/schema.rb` file, we can map existing db schema with
 our app with requires little work when db changes it's schema.
-With activerecord-sqlserver-adapter, we can take full power of
+2. With activerecord-sqlserver-adapter, we can take full power of
 ActiveRecord with SQL server database.
 
 ## What does it look like?
