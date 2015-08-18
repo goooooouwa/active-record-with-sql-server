@@ -22,5 +22,7 @@ module Rails420App
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    ActiveRecord::ConnectionAdapters::SQLServerAdapter.lowercase_schema_reflection = true
+    ActiveRecord::Base.table_name_prefix = 'dbo.'
   end
 end

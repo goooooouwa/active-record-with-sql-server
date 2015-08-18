@@ -3,21 +3,21 @@ default: &default
   port: 1433
   timeout: 50000
   adapter: sqlserver
-  host: DBQAAW01.dev.activenetwork.com
-  username: ACIUser
-  password: '@ct1v32014'
+  host: database_server_address
+  username: 
+  password: 
 
 development:
   <<: *default
-  database: ACI
+  database: db_name
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ACI
+  database: db_name
 
 production:
   <<: *default
-  database: ACI
+  database: db_name
