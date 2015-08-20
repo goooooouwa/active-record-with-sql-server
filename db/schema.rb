@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818085123) do
+ActiveRecord::Schema.define(version: 20150820090701) do
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "lnk_evnt_id"
+    t.integer  "lnk_evnt_status_id"
+    t.integer  "org_id"
+    t.datetime "created_dt"
+    t.datetime "modified_dt"
+    t.integer  "created_by_user_id"
+    t.integer  "modified_by_user_id"
+  end
 
   create_table "facebook_pages", force: :cascade do |t|
     t.string   "facebook_page_id"
