@@ -7,7 +7,7 @@ You have an exising("legacy") SQL server database which you have no control over
 # Why ActiveRecord?
 1. Greatly simplify db access code, no `find_*_by_*` methods, no dao
 modules, even no stored procedures! Only business logic, really!
-2. Significantly performance improvements( 10 times faster, see section below [How does it perform?](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/README.md#how-does-it-perform)) 
+2. Significantly performance improvements( **10 times faster**, see section below [How does it perform?](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/README.md#how-does-it-perform)) 
 3. An extremely flexable [Query Interface](http://guides.rubyonrails.org/active_record_querying.html)
 4. Plus all the goodnesses like [Cache support](http://guides.rubyonrails.org/caching_with_rails.html), [Validations](http://guides.rubyonrails.org/active_record_validations.html), [Callbacks](http://guides.rubyonrails.org/active_record_callbacks.html), [Associations](http://guides.rubyonrails.org/association_basics.html), for free.
 
