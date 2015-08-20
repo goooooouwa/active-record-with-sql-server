@@ -7,7 +7,7 @@ You have an exising("legacy") SQL server database which you have no control over
 # Why ActiveRecord?
 1. Greatly simplify db access code, no `find_*_by_*` methods, no dao
 modules, even no stored procedures! Only business logic, really!
-2. Significantly performance improvements( **one order of magnitude** faster, see section below [How is performs?]) 
+2. Significantly performance improvements( **one order of magnitude** faster, see section below [How does it perform?]) 
 3. An extremely flexable [Query Interface](http://guides.rubyonrails.org/active_record_querying.html)
 4. Plus all the goodnesses like [Cache support](http://guides.rubyonrails.org/caching_with_rails.html), [Validations](http://guides.rubyonrails.org/active_record_validations.html), [Callbacks](http://guides.rubyonrails.org/active_record_callbacks.html), [Associations](http://guides.rubyonrails.org/association_basics.html), for free.
 
@@ -20,7 +20,7 @@ ActiveRecord WITHOUT Migrations +
 2. With [activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter), we can take full power of
 ActiveRecord with SQL server database. And the configuration is [negligible](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/config/application.rb#L25).
 
-## What does it look like?
+## How does it look like?
 For instance, with a `FacebookPage` model setup like [this](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/app/models/facebook_page.rb), you can do things like
 ```ruby
 # 1. Execute stored procedures
@@ -32,6 +32,16 @@ FacebookPage.joins(:facebook_page_event).where({facebook_page_events: {id: 5}}) 
 # and much more
 ```
 completely without ever writing one procedure. Of course except the first one :)
+
+## How does it perform?
+Query | Description | existing code | ActiveRecord
+--- | --- | --- | ---
+`FacebookPage.find(44)` | find facebook page 44 | 1.2s | 0.8s
+`Event.find(25363).facebook_pages` | get all facebook pages for event 25363 | 1.1s | 0.6s
+`Event.where.not(event_status_id: 2).count` | get all published event | 28.3s for our equivalent `Event.all.select{|e| e.fetch(:EVNT_STATUS_IND) != 2}.count`| 2.0s
+`Event.limit(5).offset(30)` | pagination | Not supported | 0.6s
+`Event.includes(:facebook_pages).where.not(FacebookPages:{id: nil})` | get all facebook-page-linked events | Not supported | 4.8s
+Conclusion: on simple queries, ActiveRecord performs similar with existing code, but while quering large dataset, ActiveRecord outperforms existing code over **one order of magnitude**, which is 10 times faster. ActiveRecord not only has a `O(n)` performance, it's capable of so many things that's simply not possible with our existing code.
 
 # Tools used
 - [ActiveRecord](https://github.com/rails/rails/tree/master/activerecord)
