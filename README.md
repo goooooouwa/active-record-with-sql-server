@@ -15,7 +15,7 @@ modules, even no stored procedures! Only business logic, really!
 ActiveRecord WITHOUT Migrations +
 [activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter)
 
-## How to do that?
+## How is that achived?
 1. By hand-writing `db/schema.rb` file, we are fully confromed to the existing DB schema, never run a migration. (you can see there's [no `db/migrate`](https://github.com/goooooouwa/active-record-with-sql-server/tree/master/db) folder in this demo app, but a hand-written [`db/schema.rb`](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/db/schema.rb).)
 2. With [activerecord-sqlserver-adapter](https://github.com/rails-sqlserver/activerecord-sqlserver-adapter), we can take full power of
 ActiveRecord with SQL server database. And the configuration is [negligible](https://github.com/goooooouwa/active-record-with-sql-server/blob/master/config/application.rb#L25).
