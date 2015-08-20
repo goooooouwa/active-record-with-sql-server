@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Evnt:</strong>
+  <%= @event_facebook_page.evnt_id %>
+</p>
+
+<p>
+  <strong>Facebook page:</strong>
+  <%= @event_facebook_page.facebook_page_id %>
+</p>
+
+<p>
+  <strong>Created dt:</strong>
+  <%= @event_facebook_page.created_dt %>
+</p>
+
+<%= link_to 'Edit', edit_event_facebook_page_path(@event_facebook_page) %> |
+<%= link_to 'Back', event_facebook_pages_path %>

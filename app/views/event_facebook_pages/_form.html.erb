@@ -1,0 +1,29 @@
+<%= form_for(@event_facebook_page) do |f| %>
+  <% if @event_facebook_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_facebook_page.errors.count, "error") %> prohibited this event_facebook_page from being saved:</h2>
+
+      <ul>
+      <% @event_facebook_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :evnt_id %><br>
+    <%= f.number_field :evnt_id %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook_page_id %><br>
+    <%= f.number_field :facebook_page_id %>
+  </div>
+  <div class="field">
+    <%= f.label :created_dt %><br>
+    <%= f.datetime_select :created_dt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

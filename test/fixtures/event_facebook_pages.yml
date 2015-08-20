@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  evnt_id: 1
+  facebook_page_id: 1
+  created_dt: 2015-08-20 17:32:50
+
+two:
+  evnt_id: 1
+  facebook_page_id: 1
+  created_dt: 2015-08-20 17:32:50

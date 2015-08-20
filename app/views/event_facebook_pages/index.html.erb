@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Event Facebook Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evnt</th>
+      <th>Facebook page</th>
+      <th>Created dt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_facebook_pages.each do |event_facebook_page| %>
+      <tr>
+        <td><%= event_facebook_page.evnt_id %></td>
+        <td><%= event_facebook_page.facebook_page_id %></td>
+        <td><%= event_facebook_page.created_dt %></td>
+        <td><%= link_to 'Show', event_facebook_page %></td>
+        <td><%= link_to 'Edit', edit_event_facebook_page_path(event_facebook_page) %></td>
+        <td><%= link_to 'Destroy', event_facebook_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event facebook page', new_event_facebook_page_path %>
