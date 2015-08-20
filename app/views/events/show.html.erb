@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lnk evnt:</strong>
+  <%= @event.lnk_evnt_id %>
+</p>
+
+<p>
+  <strong>Lnk evnt status:</strong>
+  <%= @event.lnk_evnt_status_id %>
+</p>
+
+<p>
+  <strong>Org:</strong>
+  <%= @event.org_id %>
+</p>
+
+<p>
+  <strong>Created dt:</strong>
+  <%= @event.created_dt %>
+</p>
+
+<p>
+  <strong>Modified dt:</strong>
+  <%= @event.modified_dt %>
+</p>
+
+<p>
+  <strong>Created by user:</strong>
+  <%= @event.created_by_user_id %>
+</p>
+
+<p>
+  <strong>Modified by user:</strong>
+  <%= @event.modified_by_user_id %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

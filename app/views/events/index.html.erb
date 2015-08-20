@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lnk evnt</th>
+      <th>Lnk evnt status</th>
+      <th>Org</th>
+      <th>Created dt</th>
+      <th>Modified dt</th>
+      <th>Created by user</th>
+      <th>Modified by user</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.lnk_evnt_id %></td>
+        <td><%= event.lnk_evnt_status_id %></td>
+        <td><%= event.org_id %></td>
+        <td><%= event.created_dt %></td>
+        <td><%= event.modified_dt %></td>
+        <td><%= event.created_by_user_id %></td>
+        <td><%= event.modified_by_user_id %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
