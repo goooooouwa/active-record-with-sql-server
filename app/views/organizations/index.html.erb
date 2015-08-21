@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Organizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Org src</th>
+      <th>Org</th>
+      <th>Account type</th>
+      <th>Created dt</th>
+      <th>Modified dt</th>
+      <th>Created by user</th>
+      <th>Modified by user</th>
+      <th>Target marketer bit</th>
+      <th>Target marketer subscription pricing</th>
+      <th>Target marketer billing user</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizations.each do |organization| %>
+      <tr>
+        <td><%= organization.org_src_id %></td>
+        <td><%= organization.org_id %></td>
+        <td><%= organization.account_type_id %></td>
+        <td><%= organization.created_dt %></td>
+        <td><%= organization.modified_dt %></td>
+        <td><%= organization.created_by_user_id %></td>
+        <td><%= organization.modified_by_user_id %></td>
+        <td><%= organization.target_marketer_bit %></td>
+        <td><%= organization.target_marketer_subscription_pricing_id %></td>
+        <td><%= organization.target_marketer_billing_user_id %></td>
+        <td><%= link_to 'Show', organization %></td>
+        <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+        <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Organization', new_organization_path %>

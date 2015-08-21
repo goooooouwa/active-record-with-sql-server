@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  org_src_id: 1
+  org_id: 1
+  account_type_id: 1
+  created_dt: 2015-08-21 17:28:00
+  modified_dt: 2015-08-21 17:28:00
+  created_by_user_id: 1
+  modified_by_user_id: 1
+  target_marketer_bit: false
+  target_marketer_subscription_pricing_id: 1
+  target_marketer_billing_user_id: 1
+
+two:
+  org_src_id: 1
+  org_id: 1
+  account_type_id: 1
+  created_dt: 2015-08-21 17:28:00
+  modified_dt: 2015-08-21 17:28:00
+  created_by_user_id: 1
+  modified_by_user_id: 1
+  target_marketer_bit: false
+  target_marketer_subscription_pricing_id: 1
+  target_marketer_billing_user_id: 1

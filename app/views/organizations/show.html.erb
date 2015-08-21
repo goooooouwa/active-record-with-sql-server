@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Org src:</strong>
+  <%= @organization.org_src_id %>
+</p>
+
+<p>
+  <strong>Org:</strong>
+  <%= @organization.org_id %>
+</p>
+
+<p>
+  <strong>Account type:</strong>
+  <%= @organization.account_type_id %>
+</p>
+
+<p>
+  <strong>Created dt:</strong>
+  <%= @organization.created_dt %>
+</p>
+
+<p>
+  <strong>Modified dt:</strong>
+  <%= @organization.modified_dt %>
+</p>
+
+<p>
+  <strong>Created by user:</strong>
+  <%= @organization.created_by_user_id %>
+</p>
+
+<p>
+  <strong>Modified by user:</strong>
+  <%= @organization.modified_by_user_id %>
+</p>
+
+<p>
+  <strong>Target marketer bit:</strong>
+  <%= @organization.target_marketer_bit %>
+</p>
+
+<p>
+  <strong>Target marketer subscription pricing:</strong>
+  <%= @organization.target_marketer_subscription_pricing_id %>
+</p>
+
+<p>
+  <strong>Target marketer billing user:</strong>
+  <%= @organization.target_marketer_billing_user_id %>
+</p>
+
+<%= link_to 'Edit', edit_organization_path(@organization) %> |
+<%= link_to 'Back', organizations_path %>

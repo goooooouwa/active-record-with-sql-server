@@ -1,0 +1,57 @@
+<%= form_for(@organization) do |f| %>
+  <% if @organization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+
+      <ul>
+      <% @organization.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :org_src_id %><br>
+    <%= f.number_field :org_src_id %>
+  </div>
+  <div class="field">
+    <%= f.label :org_id %><br>
+    <%= f.number_field :org_id %>
+  </div>
+  <div class="field">
+    <%= f.label :account_type_id %><br>
+    <%= f.number_field :account_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :created_dt %><br>
+    <%= f.datetime_select :created_dt %>
+  </div>
+  <div class="field">
+    <%= f.label :modified_dt %><br>
+    <%= f.datetime_select :modified_dt %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by_user_id %><br>
+    <%= f.number_field :created_by_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :modified_by_user_id %><br>
+    <%= f.number_field :modified_by_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :target_marketer_bit %><br>
+    <%= f.check_box :target_marketer_bit %>
+  </div>
+  <div class="field">
+    <%= f.label :target_marketer_subscription_pricing_id %><br>
+    <%= f.number_field :target_marketer_subscription_pricing_id %>
+  </div>
+  <div class="field">
+    <%= f.label :target_marketer_billing_user_id %><br>
+    <%= f.number_field :target_marketer_billing_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
