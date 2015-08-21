@@ -1,6 +1,5 @@
 class FacebookPage < ActiveRecord::Base
   self.table_name = 'FacebookPages'
-  self.primary_key = 'id'
 
   has_and_belongs_to_many :events, join_table: "EventFacebookPages"
 
