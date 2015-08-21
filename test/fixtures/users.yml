@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aus_id: MyString
+  refresh_token: MyString
+  created_dt: 2015-08-21 16:57:08
+  modified_dt: 2015-08-21 16:57:08
+  admin: false
+  ent_prsn_id: MyString
+
+two:
+  aus_id: MyString
+  refresh_token: MyString
+  created_dt: 2015-08-21 16:57:08
+  modified_dt: 2015-08-21 16:57:08
+  admin: false
+  ent_prsn_id: MyString
