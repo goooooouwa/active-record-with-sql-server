@@ -43,6 +43,8 @@ Query | Description | existing code | ActiveRecord
 `Event.includes(:facebook_pages).where.not(FacebookPages:{id: nil})` | get all facebook-page-linked events | Not supported | 4.8s
 Conclusion: on simple queries, ActiveRecord performs similar with existing code, but while quering large dataset, ActiveRecord outperforms existing code over **one order of magnitude**, which is 10 times faster. ActiveRecord not only has a `O(n)` performance, it's capable of so many things that's simply not possible with our existing code.
 
+Note: benchmark results might vary based on network connection to DB.
+
 # References
 - [Using Rails with a legacy database schema](https://schneide.wordpress.com/2014/03/10/using-rails-with-a-legacy-database-schema/)
 - [Rails and Legacy Databases - RailsConf 2009](http://www.slideshare.net/napcs/rails-and-legacy-databases-railsconf-2009)
