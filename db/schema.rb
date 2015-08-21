@@ -33,8 +33,6 @@ ActiveRecord::Schema.define(version: 20150821090924) do
     t.integer  "user_id"
     t.integer  "event_id"
     t.datetime "created_dt"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
