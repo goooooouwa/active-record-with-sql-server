@@ -38,7 +38,7 @@ Query | Description | existing code | ActiveRecord
 --- | --- | --- | ---
 `FacebookPage.find(44)` | find facebook page 44 | 1.2s | 0.8s
 `Event.find(25363).facebook_pages` | get all facebook pages for event 25363 | 1.1s | 0.6s
-`Event.where.not(event_status_id: 2).count` | count all published event | 28.3s for our equivalent `Event.all.select{|e| e.fetch(:EVNT_STATUS_IND) != 2}.count`| 2.0s
+`Event.where("id < 1000")` | get all events with id under 1000 | 6.4s for our equivalent `Event.all.select{|e| e.id < 1000 }`| 0.6s
 `Event.limit(5).offset(30)` | pagination | Not supported | 0.6s
 `Event.includes(:facebook_pages).where.not(FacebookPages:{id: nil})` | get all facebook-page-linked events | Not supported | 4.8s
 Conclusion: on simple queries, ActiveRecord performs similar with existing code, but while quering large dataset, ActiveRecord outperforms existing code over **one order of magnitude**, which is 10 times faster. ActiveRecord not only has a `O(n)` performance, it's capable of so many things that's simply not possible with our existing code.
