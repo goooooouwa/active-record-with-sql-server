@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821090924) do
+ActiveRecord::Schema.define(version: 20150821092800) do
 
   create_table "event_facebook_pages", force: :cascade do |t|
     t.integer  "evnt_id"
@@ -29,10 +29,25 @@ ActiveRecord::Schema.define(version: 20150821090924) do
     t.integer  "modified_by_user_id"
   end
 
+  create_table "organizations", force: :cascade do |t|
+    t.integer  "org_src_id"
+    t.integer  "org_id"
+    t.integer  "account_type_id"
+    t.datetime "created_dt"
+    t.datetime "modified_dt"
+    t.integer  "created_by_user_id"
+    t.integer  "modified_by_user_id"
+    t.boolean  "target_marketer_bit"
+    t.integer  "target_marketer_subscription_pricing_id"
+    t.integer  "target_marketer_billing_user_id"
+  end
+
   create_table "user_events", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "event_id"
     t.datetime "created_dt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
