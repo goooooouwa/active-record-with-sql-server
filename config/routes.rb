@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :user_events
+
   resources :users
 
   resources :event_facebook_pages
