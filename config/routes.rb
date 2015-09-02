@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :organization_contracts
+
   resources :organizations
 
   resources :user_events

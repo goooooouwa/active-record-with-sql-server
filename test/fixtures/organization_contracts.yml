@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organization_id: 1
+  contract_id: 1
+  signed_by_user_id: 1
+  signed_dt: 2015-09-02 10:24:45
+  created_dt: 2015-09-02 10:24:45
+  modified_dt: 2015-09-02 10:24:45
+
+two:
+  organization_id: 1
+  contract_id: 1
+  signed_by_user_id: 1
+  signed_dt: 2015-09-02 10:24:45
+  created_dt: 2015-09-02 10:24:45
+  modified_dt: 2015-09-02 10:24:45

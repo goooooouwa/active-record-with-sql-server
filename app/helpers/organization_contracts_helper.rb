@@ -1,0 +1,2 @@
+module OrganizationContractsHelper
+end

@@ -1,0 +1,41 @@
+<%= form_for(@organization_contract) do |f| %>
+  <% if @organization_contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organization_contract.errors.count, "error") %> prohibited this organization_contract from being saved:</h2>
+
+      <ul>
+      <% @organization_contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :organization_id %><br>
+    <%= f.number_field :organization_id %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_id %><br>
+    <%= f.number_field :contract_id %>
+  </div>
+  <div class="field">
+    <%= f.label :signed_by_user_id %><br>
+    <%= f.number_field :signed_by_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :signed_dt %><br>
+    <%= f.datetime_select :signed_dt %>
+  </div>
+  <div class="field">
+    <%= f.label :created_dt %><br>
+    <%= f.datetime_select :created_dt %>
+  </div>
+  <div class="field">
+    <%= f.label :modified_dt %><br>
+    <%= f.datetime_select :modified_dt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @organization_contract.organization_id %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @organization_contract.contract_id %>
+</p>
+
+<p>
+  <strong>Signed by user:</strong>
+  <%= @organization_contract.signed_by_user_id %>
+</p>
+
+<p>
+  <strong>Signed dt:</strong>
+  <%= @organization_contract.signed_dt %>
+</p>
+
+<p>
+  <strong>Created dt:</strong>
+  <%= @organization_contract.created_dt %>
+</p>
+
+<p>
+  <strong>Modified dt:</strong>
+  <%= @organization_contract.modified_dt %>
+</p>
+
+<%= link_to 'Edit', edit_organization_contract_path(@organization_contract) %> |
+<%= link_to 'Back', organization_contracts_path %>

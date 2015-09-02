@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Organization Contracts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organization</th>
+      <th>Contract</th>
+      <th>Signed by user</th>
+      <th>Signed dt</th>
+      <th>Created dt</th>
+      <th>Modified dt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organization_contracts.each do |organization_contract| %>
+      <tr>
+        <td><%= organization_contract.organization_id %></td>
+        <td><%= organization_contract.contract_id %></td>
+        <td><%= organization_contract.signed_by_user_id %></td>
+        <td><%= organization_contract.signed_dt %></td>
+        <td><%= organization_contract.created_dt %></td>
+        <td><%= organization_contract.modified_dt %></td>
+        <td><%= link_to 'Show', organization_contract %></td>
+        <td><%= link_to 'Edit', edit_organization_contract_path(organization_contract) %></td>
+        <td><%= link_to 'Destroy', organization_contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Organization contract', new_organization_contract_path %>
